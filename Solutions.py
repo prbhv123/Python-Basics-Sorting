@@ -56,6 +56,28 @@ class Solution:
             arr[j+1] = key
         return arr
 
+## Quick Sort Algorithm
+1. The Quick Sort algorithm is a divide-and-conquer sorting technique. 
+2. It works by selecting a "pivot" element, partitioning the array around the pivot.
+3. Then recursively sorting the subarrays.
+
+## Solution
+class Solution:
+    def quickSort(self,arr,low,high):
+        if low < high:
+            pivot_index = self.partition(arr, low, high)
+            self.quickSort(arr, low, pivot_index - 1)
+            self.quickSort(arr, pivot_index + 1, high)
+    def partition(self,arr,low,high):
+        pivot = arr[high]
+        i = low -1
+        for j in range(low,high):
+            if arr[j] <= pivot:
+                i+=1
+                arr[i], arr[j] = arr[j], arr[i]
+        arr[i + 1], arr[high] = arr[high], arr[i + 1]
+        return i + 1
+
 
 
   
