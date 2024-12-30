@@ -14,4 +14,7 @@
 ### Description: Builds the sorted list one element at a time by repeatedly taking the next element and inserting it into the correct position within the already sorted portion.
 ### Complexity: Worst-case: O(n^2) Best-case: O(n) (when already sorted)
 
+## 4. Quick Sort
+### The Quick Sort algorithm is a divide-and-conquer sorting technique. It works by selecting a "pivot" element, partitioning the array around the pivot, and then recursively sorting the subarrays.
+
 
